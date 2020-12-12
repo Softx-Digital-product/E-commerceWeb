@@ -1,0 +1,99 @@
+
+Generic Servlet :-
+----------------------
+Public abstract class GenericServlet implemenets Servet,ServetConfig,serializable.
+
+public void init(ServletConfig config) throws ServletException
+{
+  this.config= config;
+  init();
+}
+public void init()
+{ }
+
+}
+
+ServletConfig is transient 
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+Servlet Request :-
+1.Index.html
+2.Servlet class :-using the http servlet
+3. Web xml
+
+=================================================================================================================
+
+Request Dispacher :
+---------------------
+This is an Interface, this is used to pass the information from one page to another page.
+
+Methods are:
+-------------
+1. Public void forward (servletRequest req, servletResponse res) --> Request
+
+2. Public void include (servletRequest req, servletResponse res) --> Response
+
+Steps :-
+------
+Step 1: index.html
+
+Step 2: Create the first servlet class.
+
+Step 3: Create Second Servlet Class.
+
+Step 4: web.xml
+
+=============================================================
+
+ServletConfig Interface :-
+------------------------------
+If our requirment is to define some lines fo code in the private area then we are going through the servletConfig interface
+
+For servletConfig web container is responsible to create the object.
+we are going to configure this inside web.xml file.
+
+Methods :-
+1. getInitParameter(string name);
+2. getServletName(); returns the name of the servlet
+3. getServletContext(); ---> Public area.. returns an object of servletContext.
+
+How to get the object of servletConfig :-
+----------------------------------------------
+public servletConfig getServletConfig();
+
+web.xml
+-------------------
+<init-param>
+<parm-name>
+<parm-value>
+</init-param>
+
+=======================================
+Example:-
+----------------
+
+
+ServletContext Interface :
+----------------------------
+
+In web.xml file we are going to define the context parameter by using <context-param>
+<param-name>
+<param-value>
+</context-param>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
